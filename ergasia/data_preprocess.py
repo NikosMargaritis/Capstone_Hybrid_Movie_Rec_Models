@@ -16,12 +16,14 @@ def create_one_hot_encodings(movies_df):
 
     one_hot_encodings_column = []
     for genre in genres:
-        temp = np.zeros(len(all_genres))
+        print(genre)
+        temp = [0 for _ in range(len(all_genres))]
         lista = genre.split('|')
         for item in lista:
             pos = all_genres.index(item)
             temp[pos] = 1
+        print(temp)
         one_hot_encodings_column.append(temp)
     movies_df['features'] = one_hot_encodings_column
-    movies_df.to_csv("new_movies.csv")
-    return movies_df[['movieId', 'features']]
+    # movies_df.to_csv("new_movies.csv", index=False)
+    return movies_df

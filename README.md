@@ -1,4 +1,4 @@
-# Wide_and_Deep # LightFM
+# Wide_and_Deep, LightFM
 For this project we will use 2 different Hybrid Recommendation systems
 
 LightFM 
